@@ -1,0 +1,12 @@
+<%= current_user.email %>
+<ul>
+	<% @posts.each do |post| %>
+			<li>
+          <%= post.content %>
+      </li>
+      <li style="display: inline">
+      	<%= link_to "delete" , post_path(post.id), :method => "delete" %>
+      </li>
+   <% end %>
+</ul>
+  
